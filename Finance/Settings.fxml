@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #4f6acc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.SettingsController">
+    <children>
+      <AnchorPane prefHeight="641.0" prefWidth="187.0" style="-fx-background-color: #a79ff4;">
+         <children>
+            <Separator layoutY="187.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <AnchorPane fx:id="logo" layoutY="14.0" prefHeight="173.0" prefWidth="173.0" />
+            <Button fx:id="financeButton" focusTraversable="false" layoutY="214.0" mnemonicParsing="false" onAction="#doFinance" onMouseEntered="#highlightManager" onMouseExited="#unhighlightManager" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Finance Manager">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="analyticsButton" focusTraversable="false" layoutY="287.0" mnemonicParsing="false" onAction="#doAnalytics" onMouseEntered="#highlightAnalytics" onMouseExited="#unhighlightAnalytics" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Analytics">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="260.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="feedbackButton" focusTraversable="false" layoutY="360.0" mnemonicParsing="false" onMouseEntered="#highlightFeedback" onMouseExited="#unhighlightFeedback" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Feedback">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="333.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button focusTraversable="false" layoutY="433.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #5b4ed8; -fx-border-radius: 5; -fx-background-radius: 0;" text="My Budget" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="406.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="logoutButton" focusTraversable="false" layoutY="506.0" mnemonicParsing="false" onAction="#doLogout" onMouseEntered="#highlightLogout" onMouseExited="#unhighlightLogout" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Log Out">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="479.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="187.0" layoutY="71.0" prefHeight="641.0" prefWidth="11.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="198.0" prefHeight="641.0" prefWidth="762.0" style="-fx-background-color: #5b4ed8;">
+         <children>
+              <Button fx:id="setButton" focusTraversable="false" layoutX="332.0" layoutY="260.0" onAction="#doSet" onMouseEntered="#highlightSet" onMouseExited="#unhighlightSet" prefHeight="44.0" prefWidth="77.0" style="-fx-background-color: #ffffff;" text="Set!">
+               <font>
+                  <Font name="Bebas Neue Bold" size="22.0" />
+               </font></Button>
+            <TextField fx:id="budgetField" focusTraversable="false" layoutX="128.0" layoutY="260.0" prefHeight="44.0" prefWidth="173.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="337.0">
+               <font>
+                  <Font name="Bebas Neue" size="21.0" />
+               </font></TextField>
+            <Text fill="WHITE" layoutX="86.0" layoutY="304.0" strokeType="OUTSIDE" strokeWidth="0.0" text="£" wrappingWidth="25.0">
+               <font>
+                  <Font name="Bebas Neue" size="62.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="250.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="My Budget" textAlignment="CENTER" wrappingWidth="240.0" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font name="Bebas Neue" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="86.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" wrappingWidth="181.0">
+               <font>
+                  <Font name="Bebas Neue" size="32.0" />
+               </font>
+            </Text>
+            <Separator layoutX="272.0" layoutY="260.0" opacity="0.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="17.0" />
+            <Separator layoutX="86.0" layoutY="217.0" prefHeight="43.0" prefWidth="568.0" />
+            <Separator layoutX="86.0" layoutY="304.0" prefHeight="43.0" prefWidth="568.0" />
+            <Slider fx:id="timeSlider" blockIncrement="1.0" focusTraversable="false" layoutX="86.0" layoutY="462.0" majorTickUnit="1.0" max="365.0" min="1.0" minorTickCount="1" prefHeight="16.0" prefWidth="348.0" snapToTicks="true" style="-fx-control-inner-background: #ffffff; -fx-shadow-highlight-color: transparent;" stylesheets="@resources/slider.css" value="1.0" />
+            <Text fx:id="timeText" fill="WHITE" layoutX="467.0" layoutY="481.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(DAILY)" textAlignment="CENTER" wrappingWidth="187.0">
+               <font>
+                  <Font name="Bebas Neue" size="32.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="86.0" layoutY="404.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Period:" wrappingWidth="181.0">
+               <font>
+                  <Font name="Bebas Neue" size="32.0" />
+               </font>
+            </Text>
+            <Separator layoutX="86.0" layoutY="305.0" prefHeight="43.0" prefWidth="568.0" />
+            <Separator layoutX="86.0" layoutY="414.0" prefHeight="43.0" prefWidth="568.0" style="-fx-control-inner-background: #000000;" />
+            <Separator layoutX="86.0" layoutY="491.0" prefHeight="27.0" prefWidth="568.0" />
+            <Text fx:id="currentBudgetText" fill="WHITE" layoutX="441.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="(Current: £0)" textAlignment="CENTER" wrappingWidth="213.0">
+               <font>
+                  <Font name="Bebas Neue" size="32.0" />
+               </font>
+            </Text>
+            <Text fx:id="errorMessage" fill="#f86767" layoutY="551.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="762.0">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #4f6acc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.AnalyticsController">
+    <children>
+      <AnchorPane prefHeight="641.0" prefWidth="187.0" style="-fx-background-color: #a79ff4;">
+         <children>
+            <Separator layoutY="187.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <AnchorPane fx:id="logo" layoutY="14.0" prefHeight="173.0" prefWidth="173.0" />
+            <Button fx:id="financeButton" focusTraversable="false" layoutY="214.0" mnemonicParsing="false" onAction="#doFinance" onMouseEntered="#highlightFinance" onMouseExited="#unhighlightFinance" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Finance Manager">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Button focusTraversable="false" layoutY="287.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #5b4ed8; -fx-border-radius: 5; -fx-background-radius: 0;" text="Analytics" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="260.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="feedbackButton" focusTraversable="false" layoutY="360.0" mnemonicParsing="false" onMouseEntered="#highlightFeedback" onMouseExited="#unhighlightFeedback" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Feedback">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="333.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="accountButton" focusTraversable="false" layoutY="433.0" mnemonicParsing="false" onAction="#doSettings" onMouseEntered="#highlightAccount" onMouseExited="#unhighlightAccount" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="My Budget">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="406.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="logoutButton" focusTraversable="false" layoutY="506.0" mnemonicParsing="false" onAction="#doLogout" onMouseEntered="#highlightLogout" onMouseExited="#unhighlightLogout" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Log Out">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="479.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="187.0" layoutY="71.0" prefHeight="641.0" prefWidth="11.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="198.0" prefHeight="641.0" prefWidth="762.0" style="-fx-background-color: #5b4ed8;">
+         <children>
+            <Text fill="WHITE" layoutX="266.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Analytics" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font name="Bebas Neue" size="70.0" />
+               </font>
+            </Text>
+            <PieChart fx:id="pieChart" layoutX="71.0" layoutY="155.0" prefHeight="399.0" prefWidth="620.0" />
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

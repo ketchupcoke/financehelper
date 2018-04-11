@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #4f6acc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.FinanceController">
+    <children>
+      <AnchorPane prefHeight="641.0" prefWidth="187.0" style="-fx-background-color: #a79ff4;">
+         <children>
+            <Separator layoutY="187.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <AnchorPane fx:id="logo" layoutY="14.0" prefHeight="173.0" prefWidth="173.0" />
+            <Button focusTraversable="false" layoutY="214.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #5b4ed8; -fx-border-radius: 5; -fx-background-radius: 0;" text="Finance Manager" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Button fx:id="analyticsButton" focusTraversable="false" layoutY="287.0" mnemonicParsing="false" onAction="#doAnalytics" onMouseEntered="#highlightAnalytics" onMouseExited="#unhighlightAnalytics" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Analytics">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="260.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="feedbackButton" focusTraversable="false" layoutY="360.0" mnemonicParsing="false" onMouseEntered="#highlightFeedback" onMouseExited="#unhighlightFeedback" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Feedback">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="333.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="accountButton" focusTraversable="false" layoutY="433.0" mnemonicParsing="false" onAction="#doSettings" onMouseEntered="#highlightAccount" onMouseExited="#unhighlightAccount" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="My Budget">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="406.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+            <Button fx:id="logoutButton" focusTraversable="false" layoutY="506.0" mnemonicParsing="false" onAction="#doLogout" onMouseEntered="#highlightLogout" onMouseExited="#unhighlightLogout" prefHeight="34.0" prefWidth="187.0" style="-fx-background-color: #ffffff; -fx-border-radius: 5; -fx-background-radius: 0;" text="Log Out">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Button>
+            <Separator layoutY="479.0" opacity="0.0" prefHeight="27.0" prefWidth="187.0" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="187.0" layoutY="71.0" prefHeight="641.0" prefWidth="11.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0" />
+      <AnchorPane layoutX="198.0" prefHeight="641.0" prefWidth="762.0" style="-fx-background-color: #5b4ed8;">
+         <children>
+              <Button fx:id="spentButton" focusTraversable="false" layoutX="395.0" layoutY="498.0" onAction="#doSpent" onMouseEntered="#highlightSpent" onMouseExited="#unhighlightSpent" prefHeight="44.0" prefWidth="96.0" style="-fx-background-color: #ffffff;" text="Spent">
+               <font>
+                  <Font name="Bebas Neue Bold" size="22.0" />
+               </font></Button>
+            <TextField fx:id="amountField" focusTraversable="false" layoutX="128.0" layoutY="498.0" prefHeight="44.0" prefWidth="234.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="99.0">
+               <font>
+                  <Font name="Bebas Neue" size="21.0" />
+               </font></TextField>
+            <Text fill="WHITE" layoutX="86.0" layoutY="542.0" strokeType="OUTSIDE" strokeWidth="0.0" text="£" wrappingWidth="25.0">
+               <font>
+                  <Font name="Bebas Neue" size="62.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="172.0" layoutY="113.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Finance Manager" AnchorPane.topAnchor="64.0">
+               <font>
+                  <Font name="Bebas Neue" size="70.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="86.0" layoutY="207.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select Category:" wrappingWidth="181.0">
+               <font>
+                  <Font name="Bebas Neue" size="32.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="category1" focusTraversable="false" layoutX="86.0" layoutY="260.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="181.0" stylesheets="@resources/checkboxes.css" text="Food" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="category2" focusTraversable="false" layoutX="293.0" layoutY="260.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="181.0" stylesheets="@resources/checkboxes.css" text="Clothes" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="category4" focusTraversable="false" layoutX="86.0" layoutY="315.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="181.0" stylesheets="@resources/checkboxes.css" text="Riot Points" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="category5" focusTraversable="false" layoutX="293.0" layoutY="315.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="181.0" stylesheets="@resources/checkboxes.css" text="Bitconnect" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </CheckBox>
+            <Separator layoutX="272.0" layoutY="260.0" opacity="0.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="17.0" />
+            <Separator layoutX="474.0" layoutY="260.0" opacity="0.0" orientation="VERTICAL" prefHeight="90.0" prefWidth="17.0" />
+            <CheckBox fx:id="category6" focusTraversable="false" layoutX="495.0" layoutY="315.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="181.0" stylesheets="@resources/checkboxes.css" text="Maverick Merch" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </CheckBox>
+            <CheckBox fx:id="category3" focusTraversable="false" layoutX="495.0" layoutY="260.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="181.0" stylesheets="@resources/checkboxes.css" text="Memes" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </CheckBox>
+            <Separator layoutX="86.0" layoutY="346.0" prefHeight="43.0" prefWidth="568.0" />
+            <Separator layoutX="86.0" layoutY="217.0" prefHeight="43.0" prefWidth="568.0" />
+            <Separator layoutX="86.0" layoutY="455.0" prefHeight="43.0" prefWidth="568.0" />
+            <Separator layoutX="86.0" layoutY="542.0" prefHeight="43.0" prefWidth="568.0" />
+            <Text fill="WHITE" layoutX="86.0" layoutY="445.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Amount:" wrappingWidth="181.0">
+               <font>
+                  <Font name="Bebas Neue" size="32.0" />
+               </font>
+            </Text>
+            <Button fx:id="refundButton" focusTraversable="false" layoutX="526.0" layoutY="498.0" onAction="#doRefund" onMouseEntered="#highlightRefund" onMouseExited="#unhighlightRefund" prefHeight="44.0" prefWidth="128.0" style="-fx-background-color: #ffffff;" text="Refunded">
+               <font>
+                  <Font name="Bebas Neue Bold" size="22.0" />
+               </font>
+            </Button>
+            <Text fx:id="errorMessage" fill="#f86767" layoutY="607.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="762.0">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>

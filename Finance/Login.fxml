@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="640.0" prefWidth="960.0" style="-fx-background-color: #4f6acc;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="finance.LoginController">
+    <children>
+      <AnchorPane prefHeight="641.0" prefWidth="960.0" style="-fx-background-color: #5b4ed8;">
+         <children>
+              <Button fx:id="loginButton" focusTraversable="false" layoutX="536.0" layoutY="425.0" onAction="#doLogin" onMouseEntered="#highlightGo" onMouseExited="#unhighlightGo" prefHeight="44.0" prefWidth="60.0" style="-fx-background-color: #ffffff;" text="Go!">
+               <font>
+                  <Font name="Bebas Neue Bold" size="22.0" />
+               </font></Button>
+            <PasswordField fx:id="passwordField" focusTraversable="false" layoutX="364.0" layoutY="367.0" prefHeight="27.0" prefWidth="232.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="243.0">
+               <font>
+                  <Font name="Bebas Neue" size="15.0" />
+               </font></PasswordField>
+            <TextField fx:id="usernameField" focusTraversable="false" layoutX="364.0" layoutY="287.0" prefHeight="27.0" prefWidth="232.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="323.0">
+               <font>
+                  <Font name="Bebas Neue" size="15.0" />
+               </font></TextField>
+            <Text fill="WHITE" layoutX="364.0" layoutY="279.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username" wrappingWidth="168.21875">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="364.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password" wrappingWidth="168.21875">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Text>
+            <CheckBox fx:id="newAccount" focusTraversable="false" layoutX="364.0" layoutY="432.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="151.0" stylesheets="@resources/checkboxes.css" text="New Account?" textFill="WHITE">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font></CheckBox>
+            <Text fill="WHITE" layoutX="259.0" layoutY="210.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign In / Create Account">
+               <font>
+                  <Font name="Bebas Neue" size="55.0" />
+               </font>
+            </Text>
+            <Separator layoutX="364.0" layoutY="318.0" prefHeight="27.0" prefWidth="232.0" />
+            <Separator layoutX="364.0" layoutY="398.0" prefHeight="27.0" prefWidth="232.0" />
+            <Text fx:id="errorMessage" fill="#f86767" layoutY="523.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="960.0">
+               <font>
+                  <Font name="Bebas Neue" size="22.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
